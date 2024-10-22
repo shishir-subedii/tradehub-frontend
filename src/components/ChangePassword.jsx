@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,7 +12,9 @@ const ChangePassword = () => {
     const navigate = useNavigate();
 
     document.title = "TradeHub - Change Password";
-    window.scrollTo(0, 0);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     // Get token from sessionStorage
     const token = sessionStorage.getItem('token');

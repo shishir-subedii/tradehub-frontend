@@ -17,7 +17,9 @@ const VerifyOtp = () => {
         }
     })
     document.title = "TradeHub - verify OTP";
-    window.scrollTo(0, 0);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const handleVerifyOtp = async (e) => {
         e.preventDefault();
         setLoading(true);

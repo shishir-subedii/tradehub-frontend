@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const TermsAndConditions = () => {
-    window.scrollTo(0, 0);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []); 
     document.title = "TradeHub - Terms and Conditions";
     return (
         <div className="bg-gray-100 min-h-screen">

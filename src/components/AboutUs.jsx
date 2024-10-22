@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import person1 from '../assets/person-1.png';
 import person2 from '../assets/person-2.jpg';
 import person3 from '../assets/person-3.webp';
@@ -6,7 +6,9 @@ import person3 from '../assets/person-3.webp';
 
 const AboutUs = () => {
     document.title = 'TradeHub - About Us';
-    window.scrollTo(0, 0);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <main className="container mx-auto px-4 py-6">
             <section className="bg-white shadow rounded p-6 mb-6">

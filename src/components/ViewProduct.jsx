@@ -13,7 +13,9 @@ const ViewProduct = () => {
   const [cartData, setCartData] = useContext(CartContext);
   const navigate = useNavigate();
   document.title = "TradeHub - view product";
-  window.scrollTo(0, 0);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   useEffect(() => {
     const fetchProduct = async () => {
       try {

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const PrivacyPolicy = () => {
     document.title = "TradeHub - Privacy Policy";
     //scroll to top
-    window.scrollTo(0, 0);
+    useEffect(() => { 
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className="bg-gray-100">
             <main className="container mx-auto px-4 py-6">

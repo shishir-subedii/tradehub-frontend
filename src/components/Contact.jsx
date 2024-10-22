@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const ContactUs = () => {
     document.title = "TradeHub - Contact Us";
-    window.scrollTo(0, 0);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <main className="container mx-auto px-4 py-6">
             <section className="bg-white shadow rounded p-6 mb-6">

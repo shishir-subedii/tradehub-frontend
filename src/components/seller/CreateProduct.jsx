@@ -17,7 +17,9 @@ const CreateProduct = () => {
     const categories = ['Electronics', 'Clothing', 'Home', 'Books', 'Beauty'];
 
     document.title = "TradeHub - Create Product";
-    window.scrollTo(0, 0);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     useEffect(()=>{
         if(!sessionStorage.getItem('token')){

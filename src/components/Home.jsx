@@ -23,7 +23,9 @@ const Home = () => {
     const totalSlides = slides.length;
 
     document.title = "TradeHub - Home";
-    window.scrollTo(0, 0);
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[]);
 
     useEffect(() => {
         const interval = setInterval(() => {

@@ -19,7 +19,9 @@ const UpdateProduct = () => {
     const [loading, setLoading] = useState(true);
     const categories = ['Electronics', 'Clothing', 'Home', 'Books', 'Beauty'];
     document.title = "TradeHub - Update Product";
-    window.scrollTo(0, 0);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     useEffect(() => {
         const fetchProductDetails = async () => {

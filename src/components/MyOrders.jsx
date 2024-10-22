@@ -11,7 +11,9 @@ const MyOrders = () => {
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     document.title = "TradeHub - My Orders";
-    window.scrollTo(0, 0);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     useEffect(() => {
         const fetchOrders = async () => {

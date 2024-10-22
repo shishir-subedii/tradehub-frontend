@@ -13,7 +13,9 @@ const SearchList = () => {
 
     const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
     document.title = "TradeHub - search results";
-    window.scrollTo(0, 0);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     useEffect(() => {
         fetchProducts();

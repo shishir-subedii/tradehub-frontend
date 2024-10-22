@@ -12,7 +12,9 @@ const AllProducts = () => {
     const navigate = useNavigate();
 
     document.title = "TradeHub - All Products"; 
-    window.scrollTo(0, 0);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     // Fetch products from backend
     const fetchProducts = useCallback(async (page = 1) => {
