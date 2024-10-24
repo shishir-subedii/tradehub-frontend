@@ -126,7 +126,7 @@ const SearchList = () => {
                             <div className="space-y-6">
                                 {products.length==0?<>No products found</>: products.map((product) => (
                                     <div key={product._id} className="bg-white p-4 rounded-lg shadow-lg flex items-center hover:shadow-xl transition-all duration-300">
-                                        <img src={product.images[0]} alt="Product" className="w-24 h-24 object-cover rounded-lg" />
+                                        <Link to={`/product/${product._id}`}><img src={product.images[0]} alt="Product" className="w-24 h-24 object-cover rounded-lg" /></Link>
                                         <div className="ml-4 flex-1">
                                             <Link to={`/product/${product._id}`} className="text-lg font-semibold text-black hover:underline">
                                                 {product.name}

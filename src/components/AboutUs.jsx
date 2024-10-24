@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import person1 from '../assets/person-1.png';
-import person2 from '../assets/person-2.jpg';
+import person1 from '../assets/person-1.jpg';
+import person2 from '../assets/person-2.webp';
 import person3 from '../assets/person-3.webp';
 
 
@@ -48,7 +48,7 @@ const AboutUs = () => {
 
                 <h3 className="text-xl font-semibold mb-2">Disclaimer</h3>
                 <p className="mb-4">
-                    This website is a hobby project. It is not a professional project, so please do not provide your actual information to anyone apart from your email address while signing in.
+                    This website is a hobby project. It is not a professional project, so please do not provide your actual information to anyone apart from your email address while signing in. And you are not getting any real products or services from this website.
                 </p>
             </section>
         </main>

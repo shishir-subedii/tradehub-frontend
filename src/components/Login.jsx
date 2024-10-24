@@ -32,7 +32,7 @@ const Login = () => {
 
             if (success) {
                 sessionStorage.setItem('token', message);
-                if (success.isAdmin) {
+                if (response.isAdmin == 'true') {
                     sessionStorage.setItem('isAdmin', true);
                 }
                 toast.success('Login successful!', { autoClose: 1000 });

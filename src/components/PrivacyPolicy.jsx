@@ -67,7 +67,7 @@ const PrivacyPolicy = () => {
                     <h3 className="text-xl font-semibold mb-2">8. Hobby Project Disclaimer</h3>
                     <p className="mb-4">
                         This website is a hobby project. It is not a professional project, so please do not provide
-                        your actual information to anyone apart from your email address.
+                        your actual information to anyone apart from your email address. And you are not getting any real products or services from this website.
                     </p>
                 </section>
             </main>

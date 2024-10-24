@@ -42,12 +42,12 @@ const AllProducts = () => {
     // Memoize the product list to avoid unnecessary re-renders
     const renderedProducts = useMemo(() => products.map(product => (
         <div key={product._id} className="bg-white p-4 rounded-lg shadow-lg flex items-center hover:shadow-xl transition-all duration-300">
-            <img src={product.images[0]} alt={product.name} className="w-24 h-24 object-cover rounded-lg" loading="lazy" />
+            <Link to={`/product/${product._id}`}><img src={product.images[0]} alt={product.name} className="w-24 h-24 object-cover rounded-lg" loading="lazy" /> </Link>
             <div className="ml-4 flex-1">
                 <Link to={`/product/${product._id}`} className="text-lg font-semibold text-black hover:underline">{product.name}</Link>
                 <p className="text-gray-600">{product.description.length > 120 ? `${product.description.substring(0, 120)}...` : product.description}</p>
                 <p className="text-gray-800 font-bold mt-2">${product.price.toFixed(2)}</p>
-            </div>
+                </div> 
         </div>
     )), [products]);
 

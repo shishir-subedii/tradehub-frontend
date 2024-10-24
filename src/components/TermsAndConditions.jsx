@@ -55,7 +55,7 @@ const TermsAndConditions = () => {
                     <p className="mb-4">As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p>
 
                     <h3 className="text-xl font-semibold mb-2">12. Hobby Project Disclaimer</h3>
-                    <p className="mb-4">This website is a hobby project. It is not a professional project, so please do not provide your actual information to anyone apart from your email address while signing in. Also, the information listed here might not be accurate.</p>
+                    <p className="mb-4">This website is a hobby project. It is not a professional project, so please do not provide your actual information to anyone apart from your email address while signing in. And you are not getting any real products or services from this website. Also, the information listed here might not be accurate.</p>
                 </section>
             </main>
         </div>

@@ -42,6 +42,9 @@ const Navbar = () => {
     const handleLogOut = () => {
         sessionStorage.removeItem('token');
         setCartData([]);
+        if(sessionStorage.getItem('isAdmin')){
+            sessionStorage.removeItem('isAdmin');
+        }
         navigate('/login');
     };
 
@@ -78,7 +81,9 @@ const Navbar = () => {
                     {
                         sessionStorage.getItem('token') ? <>
                             <NavLink to="/login" onClick={()=>handleLogOut()} className={({ isActive }) => isActive ? 'navbar-button navbar-active' : 'navbar-button'}>Log Out</NavLink>
-                            <NavLink to="/my-orders" className={({ isActive }) => isActive ? 'navbar-button navbar-active' : 'navbar-button'}>Myorders</NavLink>
+                            {sessionStorage.getItem('isAdmin')?
+                                <NavLink to="/admin/dashboard" className={({ isActive }) => isActive ? 'navbar-button navbar-active' : 'navbar-button'}>Admin</NavLink> : <NavLink to="/my-orders" className={({ isActive }) => isActive ? 'navbar-button navbar-active' : 'navbar-button'}>My Orders</NavLink>
+                            }
                         </> :
                             <>
                                 <NavLink to="/login" className={({ isActive }) => isActive ? 'navbar-button navbar-active' : 'navbar-button'}>Login</NavLink>
@@ -110,7 +115,9 @@ const Navbar = () => {
                     {
                         sessionStorage.getItem('token') ? <>
                             <NavLink to="/login" className={({ isActive }) => isActive ? 'navbar-button navbar-active' : 'navbar-button'}>Log Out</NavLink>
-                            <NavLink to="/my-orders" className={({ isActive }) => isActive ? 'navbar-button navbar-active' : 'navbar-button'}>Myorders</NavLink>
+                            { sessionStorage.getItem('isAdmin')?
+                                <NavLink to="/admin/dashboard" className={({ isActive }) => isActive ? 'navbar-button navbar-active' : 'navbar-button'}>Admin</NavLink> : <NavLink to="/my-orders" className={({ isActive }) => isActive ? 'navbar-button navbar-active' : 'navbar-button'}>My Orders</NavLink>
+                            }
                         </> :
                             <>
                                 <NavLink to="/login" className={({ isActive }) => isActive ? 'navbar-button navbar-active' : 'navbar-button'}>Login</NavLink>
