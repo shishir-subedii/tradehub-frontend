@@ -24,6 +24,11 @@ import UpdateProduct from './components/seller/UpdateProduct';
 import VerifyOtp from './components/VerifyOtp';
 import VerifyForgotOtp from './components/VerifyForgotOtp';
 import ChangePassword from './components/ChangePassword';
+import AdminDashboard from './components/admin/AdminDashboard';
+import UpdateOrderAdmin from './components/admin/UpdateOrderAdmin';
+import GetAllOrdersAdmin from './components/admin/GetAllOrdersAdmin';
+import GetAllUsersAdmin from './components/admin/GetAllUsersAdmin';
+import DeleteProductAdmin from './components/admin/DeleteProductAdmin';
 
 export default function App() {
   return (
@@ -53,6 +58,11 @@ export default function App() {
         <Route path="/seller/get-all-orders" element={<GetAllOrders />} />
         <Route path="/seller/get-all-products" element={<GetAllProducts />} />
         <Route path="/seller/products/update/:id" element={<UpdateProduct />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/get-all-orders" element={<GetAllOrdersAdmin />} />
+        <Route path="/admin/update-order/:id" element={<UpdateOrderAdmin />} />
+        <Route path="/admin/get-all-users" element={<GetAllUsersAdmin/>} />
+        <Route path="/admin/delete-product/" element={<DeleteProductAdmin />} />
       </Routes>
       <Footer />
       </CartProvider>
