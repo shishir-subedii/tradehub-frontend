@@ -86,7 +86,7 @@ const AllProducts = () => {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
-                        <h3 className="text-lg font-semibold mb-4">Filters</h3>
+                        <h3 className="text-lg font-semibold mb-4">Filters <p>Not working</p></h3>
                         <div className="mb-4">
                             <label className="block text-gray-700 mb-2">Price</label>
                             <input type="checkbox" className="mr-2" /> Under $50<br />
