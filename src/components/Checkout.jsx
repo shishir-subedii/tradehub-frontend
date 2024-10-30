@@ -86,25 +86,29 @@ const Checkout = () => {
                     <>
                         <div className="bg-white p-6 rounded-lg shadow-lg">
                             <h2 className="text-lg font-semibold mb-4">Shipping Address</h2>
+
                             <div className="mb-4">
-                                <label htmlFor="street" className="block text-gray-700 mb-2">Street</label>
-                                <input type="text" id="street" name="street" value={shippingAddress.street} onChange={handleAddressChange} className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" />
+                                <label htmlFor="country" className="block text-gray-700 mb-2">Country</label>
+                                <input type="text" id="country" name="country" value={shippingAddress.country} onChange={handleAddressChange} className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" />
                             </div>
                             <div className="mb-4">
-                                <label htmlFor="city" className="block text-gray-700 mb-2">City</label>
-                                <input type="text" id="city" name="city" value={shippingAddress.city} onChange={handleAddressChange} className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" />
-                            </div>
-                            <div className="mb-4">
-                                <label htmlFor="state" className="block text-gray-700 mb-2">State</label>
+                                <label htmlFor="state" className="block text-gray-700 mb-2">State / Province</label>
                                 <input type="text" id="state" name="state" value={shippingAddress.state} onChange={handleAddressChange} className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" />
                             </div>
+
                             <div className="mb-4">
                                 <label htmlFor="postalCode" className="block text-gray-700 mb-2">Postal Code</label>
                                 <input type="text" id="postalCode" name="postalCode" value={shippingAddress.postalCode} onChange={handleAddressChange} className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" />
                             </div>
+
                             <div className="mb-4">
-                                <label htmlFor="country" className="block text-gray-700 mb-2">Country</label>
-                                <input type="text" id="country" name="country" value={shippingAddress.country} onChange={handleAddressChange} className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" />
+                                <label htmlFor="city" className="block text-gray-700 mb-2">City</label>
+                                <input type="text" id="city" name="city" value={shippingAddress.city} onChange={handleAddressChange} className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" />
+                            </div>
+
+                            <div className="mb-4">
+                                <label htmlFor="street" className="block text-gray-700 mb-2">Street</label>
+                                <input type="text" id="street" name="street" value={shippingAddress.street} onChange={handleAddressChange} className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" />
                             </div>
                         </div>
                         <div className="bg-white p-6 rounded-lg shadow-lg mt-6">
