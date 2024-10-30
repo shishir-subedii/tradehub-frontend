@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Loading from './Loading';
 
 const MyOrders = () => {
@@ -10,6 +10,7 @@ const MyOrders = () => {
     const [loading, setLoading] = useState(true);
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
+    const navigate = useNavigate(); 
     document.title = "TradeHub - My Orders";
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -46,7 +47,7 @@ const MyOrders = () => {
 
     useEffect(()=>{
         if(!sessionStorage.getItem('token')){
-            window.location.href = '/login';
+            navigate('/login');
         }
     })
 

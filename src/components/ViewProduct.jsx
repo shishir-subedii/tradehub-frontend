@@ -46,9 +46,13 @@ const ViewProduct = () => {
 
   const addToCart = () => {
     if (!sessionStorage.getItem('token')) {
-      return toast.error('You must be logged in to add products to cart', {
-        autoClose: 3000,
+      toast.error('You must be logged in to add products to cart', {
+        autoClose: 1000,
       });
+      setInterval(() => {
+        navigate('/login');
+      }, 1000);
+      return;
     }
     try {
       const productToAdd = {

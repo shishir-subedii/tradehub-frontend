@@ -17,7 +17,7 @@ const UpdateOrderAdmin = () => {
 
     useEffect(() => {
         if (!sessionStorage.getItem('token') || !sessionStorage.getItem('isAdmin')) {
-            window.location.href = '/login';
+            navigate('/login');
         }
     });
 

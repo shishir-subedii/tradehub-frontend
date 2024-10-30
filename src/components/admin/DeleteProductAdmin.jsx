@@ -3,10 +3,12 @@ import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../Loading';
+import { useNavigate } from 'react-router-dom';
 
 const DeleteProductAdmin = () => {
     const [productId, setProductId] = useState('');
     const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
 
     const handleInputChange = (e) => {
         setProductId(e.target.value);
@@ -16,7 +18,7 @@ const DeleteProductAdmin = () => {
 
     useEffect(()=>{
         if(!sessionStorage.getItem('token') || !sessionStorage.getItem('isAdmin')) {
-            window.location.href = '/login';
+            navigate('/login');
         }
     })
 

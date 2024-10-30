@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import laws from '../assets/48 laws.jpg'
 import chair1 from '../assets/chair-1.jpeg'
 import lipstick from '../assets/lipstick.jpg'
@@ -21,11 +21,16 @@ const Home = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const slides = [background1, background2, bg, bg1, background1, bg];
     const totalSlides = slides.length;
+    const navigate = useNavigate();
 
     document.title = "TradeHub - Home";
     useEffect(()=>{
         window.scrollTo(0, 0);
     },[]);
+
+    const handleShopNow = () => {
+        navigate('/all-products');
+    };
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -63,7 +68,7 @@ const Home = () => {
                         <p className="text-center text-white-600 my-1">
                             Your ultimate marketplace for buying, selling, and exploring unique products with ease.
                         </p>
-                        <button className="mt-4 px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-700"><Link to='/all-products'>Shop Now</Link> </button>
+                        <button onClick={handleShopNow} className="mt-4 px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-700">Shop Now</button>
                     </div>
                 </div>
             </section>

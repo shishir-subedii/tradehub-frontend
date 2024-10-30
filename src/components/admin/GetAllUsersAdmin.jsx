@@ -3,6 +3,7 @@ import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../Loading';
+import { useNavigate } from 'react-router-dom';
 
 const GetAllUsersAdmin = () => {
     const [users, setUsers] = useState([]);
@@ -11,10 +12,11 @@ const GetAllUsersAdmin = () => {
     const [totalPages, setTotalPages] = useState(1);
     const [searchTerm, setSearchTerm] = useState('');
     const [isSearching, setIsSearching] = useState(false);
+    const navigate = useNavigate(); 
 
     useEffect(() => {
         if (!sessionStorage.getItem('token') || !sessionStorage.getItem('isAdmin')) {
-            window.location.href = '/login';
+            navigate('/login');
         }
     }, []);
 

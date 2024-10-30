@@ -3,6 +3,7 @@ import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../Loading';
+import { useNavigate } from 'react-router-dom';
 
 const CreateProduct = () => {
     const [name, setName] = useState('');
@@ -13,6 +14,7 @@ const CreateProduct = () => {
     const [tags, setTags] = useState([]);
     const [images, setImages] = useState([]);
     const [loading, setLoading] = useState(false);
+    const navigate = useNavigate(); 
 
     const categories = ['Electronics', 'Clothing', 'Home', 'Books', 'Beauty'];
 
@@ -23,7 +25,7 @@ const CreateProduct = () => {
 
     useEffect(()=>{
         if(!sessionStorage.getItem('token')){
-            window.location.href = '/login';
+            navigate('/login');
         }
     })
 

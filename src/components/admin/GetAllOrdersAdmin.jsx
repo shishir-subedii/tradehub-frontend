@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../Loading';
@@ -12,10 +12,11 @@ const GetAllOrdersAdmin = () => {
     const [totalPages, setTotalPages] = useState(1);
     const [searchTerm, setSearchTerm] = useState('');
     const [isSearching, setIsSearching] = useState(false);
+    const navigate = useNavigate(); 
 
     useEffect(()=>{
         if(!sessionStorage.getItem('token') || !sessionStorage.getItem('isAdmin')) {
-            window.location.href = '/login';
+            navigate('/login');
         }
     })
     document.title = "TradeHub - Admin Orders";

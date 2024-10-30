@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../Loading';
@@ -10,6 +10,7 @@ const GetAllProducts = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate(); 
     document.title = "TradeHub - Products";
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -70,7 +71,7 @@ const GetAllProducts = () => {
 
     useEffect(() => {
         if (sessionStorage.getItem('token') === null) {
-            window.location.href = '/login';
+           navigate('/login');
         }
     }, []);
     

@@ -3,17 +3,25 @@ import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../Loading';
+import { useNavigate } from 'react-router-dom';
 
 const GetAllOrders = () => {
     const [orders, setOrders] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate(); 
 
     document.title = "TradeHub - All Orders";
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+    useEffect(() => {
+        if(!sessionStorage.getItem('token')){
+            navigate('/login');
+        }
+    });
 
     useEffect(() => {
         const fetchOrders = async () => {

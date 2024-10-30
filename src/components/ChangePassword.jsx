@@ -18,9 +18,11 @@ const ChangePassword = () => {
 
     // Get token from sessionStorage
     const token = sessionStorage.getItem('token');
+    useEffect(() => {
     if (!token) {
         navigate('/login');
     }
+    }, [token]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
