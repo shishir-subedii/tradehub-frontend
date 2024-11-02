@@ -49,9 +49,6 @@ const ViewProduct = () => {
       toast.error('You must be logged in to add products to cart', {
         autoClose: 1000,
       });
-      setInterval(() => {
-        navigate('/login');
-      }, 1000);
       return;
     }
     try {
