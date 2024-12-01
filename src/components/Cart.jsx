@@ -106,7 +106,7 @@ const Cart = () => {
                                         <img src={item.Image} alt="Product Image" className="w-24 h-24 object-cover rounded-lg hover-effect" />
                                         <div>
                                             <h2 className="text-lg font-semibold hover-effect">{item.Name}</h2>
-                                            <p className="text-gray-500">${item.Price}</p>
+                                            <p className="text-gray-500">${parseInt(item.Price)/parseInt(item.Quantity)}</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center space-x-4 mt-4 md:mt-0">
