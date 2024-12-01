@@ -65,7 +65,7 @@ const MyOrders = () => {
                         <div className="bg-white p-6 rounded-lg shadow-lg">
                             {orders.map(order => (
                                 <div key={order._id} className="border-b pb-4 mb-4">
-                                    <h2 className="text-lg font-semibold">Order ID: {order._id}</h2>
+                                    <h2 className="text-lg font-semibold">Order ID: {order._id}</h2> <br/>
                                     <p className="text-gray-700 mb-2">Total Amount: ${order.totalAmount} + Delivery Charges</p>
                                     <p className="text-gray-700 mb-2">Payment Status: {order.paymentStatus}</p>
                                     <p className="text-gray-700 mb-2">Order Status: {order.orderStatus}</p>
