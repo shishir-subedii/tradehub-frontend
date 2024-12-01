@@ -66,7 +66,7 @@ const MyOrders = () => {
                             {orders.map(order => (
                                 <div key={order._id} className="border-b pb-4 mb-4">
                                     <h2 className="text-lg font-semibold">Order ID: {order._id}</h2>
-                                    <p className="text-gray-700 mb-2">Total Amount: ${order.totalAmount}</p>
+                                    <p className="text-gray-700 mb-2">Total Amount: ${order.totalAmount} + Delivery Charges</p>
                                     <p className="text-gray-700 mb-2">Payment Status: {order.paymentStatus}</p>
                                     <p className="text-gray-700 mb-2">Order Status: {order.orderStatus}</p>
                                     <p className="text-gray-700 mb-2">Shipping Address: {order.shippingAddress.street}, {order.shippingAddress.city}, {order.shippingAddress.state}, {order.shippingAddress.postalCode}, {order.shippingAddress.country}</p>
