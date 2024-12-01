@@ -121,8 +121,8 @@ const Checkout = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <p className="text-lg font-bold mb-2">Total Amount: ${selectedProducts.reduce((acc, item) => acc + item.Price, 0)}</p>
-                            <p className="text-lg font-bold mb-4">Payment Method: COD</p>
+                            <p className="text-lg font-bold mb-2">Total Amount: ${selectedProducts.reduce((acc, item) => acc + item.Price, 0) + 10}</p>
+                            <p className="text-lg font-bold mb-4">Payment Method: COD ($10)</p>
                             <button onClick={handlePlaceOrder} className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300 hover-effect">{loading ? <Loading /> : 'Place Order'}</button>
                         </div>
                     </>
